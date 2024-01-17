@@ -4,7 +4,7 @@ let noseX,noseY;
 let reyeX,reyeY;
 let leyeX,leyeY;
 let singlePose,skeleton;
-let actor_img;
+
 
 function setup()
 {
@@ -13,7 +13,7 @@ function setup()
     capture.hide();
     posenet=ml5.poseNet(capture,modeLoaded);
     posenet.on('pose',receivedPoses);
-    actor_img=loadImage('joh_preview_rev_1.png',)
+   
    
 }
 function receivedPoses(poses)
@@ -51,6 +51,6 @@ function draw()
     line(skeleton[j][0].position.x,skeleton[j][0].position.y,
         skeleton[j][1].position.x,skeleton[j][1].position.y);
    }
-   image(actor_img,singlePose.nose.x-45,singlePose.nose.y-60,100,100);
+   
 }
 }
